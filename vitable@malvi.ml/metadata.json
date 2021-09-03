@@ -1,8 +1,8 @@
 {
   "name": "VITable",
   "description": "Show your VIT timetable for today!",
-  "uuid": "malvigagan@gmail.com",
+  "uuid": "vitable@malvi.ml",
   "shell-version": [
-    "40"
+    "41", "40"
   ]
 }
