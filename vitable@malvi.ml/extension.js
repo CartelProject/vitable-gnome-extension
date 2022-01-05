@@ -1,7 +1,8 @@
 /* extension.js
  *
- * Copyright (C) 2021 Nishal Kulkarni
- * 
+ * Copyright (C) 2021-22 Nishal Kulkarni
+ * Copyright (C) 2022 The Cartel Project
+ *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 2 of the License, or
@@ -48,7 +49,7 @@ const Indicator = GObject.registerClass(
             this.add_actor(this.button_text);
             this.refresh();
 
-            let item = new PopupMenu.PopupMenuItem(_('Show All Classes'));
+            let item = new PopupMenu.PopupMenuItem(_('Show all classes for today'));
             item.connect('activate', () => {
                 getAllClasses();
             });
@@ -135,7 +136,7 @@ function init(meta) {
 function getAllClasses() {
     try {
         let proc = Gio.Subprocess.new(
-            ['vitable', 'a'],
+            ['vitable', 's'],
             Gio.SubprocessFlags.STDOUT_PIPE | Gio.SubprocessFlags.STDERR_PIPE
         );
 
